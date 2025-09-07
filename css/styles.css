@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #777;
+    transform: translateX(-160px);
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    transform: translateX(0);
+}
+
+.sidebar:hover .menu-label {
+    opacity: 0;
+}
+
+.menu-label {
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    transform-origin: left top;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    white-space: nowrap;
+
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu {
+    list-style: none;
+    padding: 60px 20px;
+    margin: 0;
+}
+
+.menu li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu li::before {
+    content: "♦";
+    font-size: 20px;
+    color: orange;
+    margin-right: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: .2s color ease-in-out;
+}
+
+.menu a:hover {
+    color: orange;
+}
